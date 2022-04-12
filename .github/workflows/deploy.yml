@@ -1,0 +1,13 @@
+name: Update Docker and Deploy (Production)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+
+jobs:
+  update-docker:
+    uses: RDGAapp/nginx/.github/workflows/build_push.yml@main
+    secrets:
+      DOCKER_LOGIN: ${{ secrets.DOCKER_LOGIN }}
+      DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
