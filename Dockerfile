@@ -1,4 +1,4 @@
-FROM nginx:1.21.6
+FROM nginx:stable-alpine
 
 WORKDIR /etc/nginx/conf.d
 COPY nginx.conf default.conf
